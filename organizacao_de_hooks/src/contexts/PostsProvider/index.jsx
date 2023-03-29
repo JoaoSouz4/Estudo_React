@@ -6,6 +6,7 @@ import { data } from "./data";
 
 export const PostsProvider = ({children}) => {
     const [postsState, postsDispatch] = useReducer(reducer, data);
+    
     return (
         <PostsContext.Provider value={{postsState, postsDispatch}}>
             {children}
