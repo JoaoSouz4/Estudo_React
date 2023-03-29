@@ -1,0 +1,54 @@
+@keyframes load {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load-reverse {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.load-component{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.load-reverse{
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    border: 5px solid rgb(99, 153, 234);
+    border-top: 5px solid transparent;
+    animation-name: load-reverse;
+    animation-direction: reverse;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.loading{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    border: 7px solid rgb(99, 153, 234);
+    border-top: 7px solid transparent;
+    animation-name: load;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
