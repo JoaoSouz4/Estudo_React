@@ -19,11 +19,6 @@ export const useFetch = (url, options) => {
             urlRef.current = url;
             setShouldLoad(s => !s); 
         }
-
-        if(!isObjectEqual(options, optionsRef.current)) {
-            urlRef.current = url;
-            setShouldLoad(s => !s);
-        }
     }, [url, options])
 
     useEffect(() => {
